@@ -14,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'BlogController@index');
+// Route::get('/isi-post', function() {
+//     return view('frontend.isi_post');
+// });
+
+
 
 Auth::routes();
 
@@ -56,3 +61,5 @@ Route::group(['middleware'=>'auth'], function() {
     Route::get('/user/{id}/destroy','UserController@destroy');
 
 });
+
+Route::get('/{slug}','BlogController@isi_blog')->name('blog.isi');
