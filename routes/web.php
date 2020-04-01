@@ -62,4 +62,7 @@ Route::group(['middleware'=>'auth'], function() {
 
 });
 
-Route::get('/{slug}','BlogController@isi_blog')->name('blog.isi');
+Route::get('blog/{slug}','BlogController@isi_blog')->name('blog.isi');
+Route::get('artikel/','BlogController@artikel')->name('artikel');
+Route::get('/list-category/{category}','BlogController@list_category')->name('blog.category');
+Route::get('/cari','BlogController@cari')->name('blog.cari');

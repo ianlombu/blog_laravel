@@ -32,7 +32,7 @@
 
 <body>
     <!-- HEADER -->
-    <header id="header">
+    <header id="header">    
         <!-- NAV -->
         <div id="nav">
             <!-- Top Nav -->
@@ -58,8 +58,9 @@
                         <button class="aside-btn"><i class="fa fa-bars"></i></button>
                         <button class="search-btn"><i class="fa fa-search"></i></button>
                         <div id="nav-search">
-                            <form>
-                                <input class="input" name="search" placeholder="Enter your search...">
+                            <form action="{{route('blog.cari')}}" method="get">
+
+                                <input class="input" name="cari" placeholder="Enter your search...">
                             </form>
                             <button class="nav-close search-close">
                                 <span></span>
@@ -76,23 +77,22 @@
                 <div class="container">
                     <!-- nav -->
                     <ul class="nav-menu">
+                        <li><a href='/'>Beranda</a></li>
                         <li class="has-dropdown">
-                            <a href="index.html">Home</a>
+                            <a href="#">Kategori</a>
                             <div class="dropdown">
                                 <div class="dropdown-body">
                                     <ul class="dropdown-list">
-                                        <li><a href="category.html">Category page</a></li>
-                                        <li><a href="blog-post.html">Post page</a></li>
-                                        <li><a href="author.html">Author page</a></li>
-                                        <li><a href="about.html">About Us</a></li>
-                                        <li><a href="contact.html">Contacts</a></li>
-                                        <li><a href="blank.html">Regular</a></li>
+                                        @foreach ($category_widget as $list_kategori)
+                                            <li><a href="category.html">{{$list_kategori->nama}}</a></li>    
+                                        @endforeach
+                                        
                                     </ul>
                                 </div>
                             </div>
                         </li>
 
-                        <li><a href="#">Technology</a></li>
+                        <li><a href="{{route('artikel')}}">ARTIKEL</a></li>
                         <li><a href="#">Health</a></li>
                         <li><a href="#">Travel</a></li>
                     </ul>

@@ -27,6 +27,6 @@
 
     @foreach ($data as $isi_post)
         {{-- <img src="{{asset('images/'.$isi_post->gambar)}}" alt=""> --}}
-        {{$isi_post->konten}}
+        {!!$isi_post->konten!!}
     @endforeach
 @endsection

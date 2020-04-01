@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="{{asset('admin/plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css')}}">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <script src="//cdn.ckeditor.com/4.14.0/full/ckeditor.js"></script>
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">

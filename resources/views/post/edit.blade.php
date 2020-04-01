@@ -70,7 +70,7 @@
 
                                     <div class="form-group{{$errors->has('konten') ? 'has-error' : ''}}">
                                         <label for=" exampleFormControlTextarea1">Konten</label>
-                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                        <textarea class="form-control" id="editor1" rows="3"
                                             name="konten">{{$post->konten}}</textarea>
                                         @if($errors->has('konten'))
                                         <span class="help-block">*{{$errors->first('konten')}}</span>
@@ -103,5 +103,9 @@
         <!-- /.row -->
 
 </div>
+
+<script>
+    CKEDITOR.replace( 'editor1' );
+</script>
 
 @endsection
